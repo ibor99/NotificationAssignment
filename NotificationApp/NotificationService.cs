@@ -8,18 +8,18 @@ namespace NotificationApp
 {
     public class NotificationService
     {
-        private readonly List<INotification> _notificationTypes;
+        private readonly List<INotification> _notificationWays;
 
         public NotificationService(IEnumerable<INotification> notificationTypes)
         {
-            _notificationTypes = notificationTypes.ToList();
+            _notificationWays = notificationTypes.ToList();
         }
 
-        public void SendNotification(string message) 
+        public void SendNotification(User user, string message) 
         {
-            foreach ( var notType in _notificationTypes ) 
+            foreach ( var notificationWay in _notificationWays ) 
             {
-                notType.SendNotification(message);
+                notificationWay.SendNotification(user,message);
             }
         }
     }

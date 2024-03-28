@@ -8,9 +8,9 @@ namespace NotificationApp
 {
     public class PushNotification : INotification
     {
-        public void SendNotification(string message)
+        public void SendNotification(User user, string message)
         {
-            Console.WriteLine($"Sending Push notification : {message}");
+            Console.WriteLine($"Sending Push notification to {user.Email} : {message}");
         }
     }
 }

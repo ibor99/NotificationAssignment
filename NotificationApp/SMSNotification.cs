@@ -8,9 +8,9 @@ namespace NotificationApp
 {
     public class SMSNotification : INotification
     {
-        public void SendNotification(string message)
+        public void SendNotification(User user, string message)
         {
-            Console.WriteLine($"Sending SMS notification : {message}");
+            Console.WriteLine($"Sending SMS notification to {user.Email} : {message}");
         }
     }
 }

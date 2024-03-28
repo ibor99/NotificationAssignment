@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace NotificationApp
 {
-    public interface INotification
+    public class User
     {
-        void SendNotification(User user,string message);
+        public string Email { get; }
+
+        public User(string email)
+        {
+            Email = email;
+        }
     }
 }
